@@ -1,0 +1,1 @@
+qsub -cwd -e ${PWD}/LOGS -m bea -l h_data=16G,h_rt=10:00:00 -b y "module load tophat;module load bowtie2; tophat -G ~/project-mcdb/datasets/Homo_sapiens/UCSC/hg19/Annotation/Genes/genes.gtf -o 2D_BME ~/project-mcdb/datasets/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome 2D-BME-1_S1_R1_001.fastq 2D-BME-2_S2_R1_001.fastq"
